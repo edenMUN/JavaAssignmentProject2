@@ -3,6 +3,7 @@ package system_screens;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import repository.BasePage;
 
 /**
@@ -22,11 +23,10 @@ public class ReceiverInfo extends BasePage {
     /**
      * The method calls all the other methods is this class.
      */
-    public void receiverInfo(){
+    public void receiverInfo() {
         pressRadioButton();
-        ReceiverName();
-        pickEvent();
         enterBlessing();
+        pickEvent();
         UploadPicture();
         pressContinue();
     }
@@ -52,9 +52,9 @@ public class ReceiverInfo extends BasePage {
     /**
      * The method find an element- the event and click on the option selected.
      */
-    private void pickEvent(){
+    private void pickEvent() {
         clickElement(By.className("selected-name"));
-        clickElement(By.cssSelector("li[data-option-array-index='3']"));
+        clickElement(By.cssSelector("li[value='10']"));
     }
 
     /**
@@ -70,7 +70,7 @@ public class ReceiverInfo extends BasePage {
      * The method fins an element- upload picture and upload a picture to the website.
      */
     private void UploadPicture(){
-        sendKeysToElement(By.className("media-circle-btn ember-view bm-media-upload"), "C:\\Users\\edenmm\\Desktop\\download.jfif");
+        sendKeysToElement(By.className("bm-media-upload"), "C:\\Users\\edenmm\\Desktop\\download.jfif");
     }
 
     /**
@@ -79,5 +79,4 @@ public class ReceiverInfo extends BasePage {
     private void pressContinue(){
         clickElement(By.cssSelector("button[gtm='המשך']"));
     }
-
 }

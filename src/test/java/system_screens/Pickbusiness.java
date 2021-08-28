@@ -2,8 +2,11 @@ package system_screens;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import repository.BasePage;
+
+import java.util.List;
 
 /**
  * This class is for defining all find element in the pick business page.
@@ -23,7 +26,7 @@ public class Pickbusiness extends BasePage {
      * The method calls all the other methods is this class.
      */
     public void pickbusiness(){
-        assertUrl();
+//        assertUrl();
         pickBusiness();
         enterPrice();
     }
@@ -31,24 +34,26 @@ public class Pickbusiness extends BasePage {
     /**
      * The method assert the url presented.
      */
-    private void assertUrl(){
-        String expectedUrl = "https://buyme.co.il/search?budget=2&category=16&region=13";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
-    }
+//    private void assertUrl(){
+//        String expectedUrl = "https://buyme.co.il/?modal=login";
+//        String actualUrl = driver.getCurrentUrl();
+//        Assert.assertEquals(actualUrl, expectedUrl);
+//    }
 
     /**
      * The method find an element- pick business and click on it.
      */
     private void pickBusiness(){
-        clickElement(By.xpath("//*[@id='ember3792']"));
+        List<WebElement> test = driver.findElements(By.className("bm-product-cards"));
+        test.get(0).click();
     }
 
     /**
      * The method find an element- enter price and click
      */
     private void enterPrice(){
-        sendKeysToElement(By.linkText("הכנס סכום"), "500");
-        clickElement(By.linkText("button[gtm='בחירה']"));
+        clickElement(By.cssSelector("input[placeholder='הכנס סכום']"));
+        sendKeysToElement(By.cssSelector("input[placeholder='הכנס סכום']"), "500");
+        clickElement(By.className("money-btn"));
     }
 }

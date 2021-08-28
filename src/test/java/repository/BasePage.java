@@ -45,7 +45,7 @@ public class BasePage {
     }
 
     /**
-     * The method בreates the driver.
+     * The method creates the driver.
      * @param locator of the element.
      * @return the picture of the screenshot page.
      */

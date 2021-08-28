@@ -24,7 +24,6 @@ public class SenderInfo extends BasePage {
      */
     public void senderinfo(){
         pressSms();
-        senderName();
         senderPhone();
         pressPay();
     }
@@ -33,7 +32,7 @@ public class SenderInfo extends BasePage {
      * The method find the SMS element and send a phone number.
      */
     private void pressSms(){
-        clickElement(By.cssSelector("svg[gtm=''method-sms]"));
+        clickElement(By.cssSelector("svg[gtm='method-sms']"));
         clickElement(By.linkText("נייד מקבל/ת המתנה"));
         sendKeysToElement(By.linkText("נייד מקבל/ת המתנה"), "0508233456");
     }

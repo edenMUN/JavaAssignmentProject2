@@ -47,7 +47,7 @@ public class IntroRegistrationScreen extends BasePage {
      * @return the name field value.
      */
     public String firstName(){
-        String name = "eitanmunmm";
+        String name = "eitanmunmm1";
         sendKeysToElement(By.cssSelector("input[placeholder='שם פרטי']"), name);
         return name;
     }
@@ -58,7 +58,7 @@ public class IntroRegistrationScreen extends BasePage {
      */
     public String email(){
         WebElement enterEmail = driver.findElement(Constants.EMAIL);
-        enterEmail.sendKeys("eitanmunmm.munioz@gmail.com");
+        enterEmail.sendKeys("eitanmunmm1.munioz@gmail.com");
         return enterEmail.getAttribute("value");
     }
 

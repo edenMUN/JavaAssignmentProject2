@@ -53,7 +53,7 @@ public class Pickbusiness extends BasePage {
      */
     private void enterPrice(){
         clickElement(By.cssSelector("input[placeholder='הכנס סכום']"));
-        sendKeysToElement(By.cssSelector("input[placeholder='הכנס סכום']"), "500");
+        sendKeysToElement(By.cssSelector("input[placeholder='הכנס סכום']"), "500.00");
         clickElement(By.className("money-btn"));
     }
 }

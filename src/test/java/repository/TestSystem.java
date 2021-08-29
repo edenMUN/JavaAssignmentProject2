@@ -45,8 +45,8 @@ public class TestSystem {
 
     @Test
     public void login01(){
-        String expectedName = "eitanmunmm";
-        String expectedEmail = "eitanmunmm.munioz@gmail.com";
+        String expectedName = "eitanmunmm1";
+        String expectedEmail = "eitanmunmm1.munioz@gmail.com";
         String expectedPassword = "Aa1234567";
         String expectedConPassword = "Aa1234567";
         IntroRegistrationScreen loginPage = new IntroRegistrationScreen(driver);
